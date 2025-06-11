@@ -3,6 +3,9 @@ name: contoso-traders-app-deployment
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 env:
   ACR_NAME: contosotradersacr
   AKS_CLUSTER_NAME: contoso-traders-aks
