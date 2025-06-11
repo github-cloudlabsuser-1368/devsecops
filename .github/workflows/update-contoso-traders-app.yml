@@ -3,11 +3,13 @@ name: update contoso traders app
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 env:
   # You can specify any location for `SUB_DEPLOYMENT_REGION`. It's the region where the deployment
   # metadata will be stored, and not where the resource groups will be deployed.
   ACR_NAME: contosotradersacr
-  AKS_CLUSTER_NAME: contoso-traders-aks
   AKS_CPU_LIMIT: 250m
   AKS_DNS_LABEL: contoso-traders-products
   AKS_MEMORY_LIMIT: 256Mi
